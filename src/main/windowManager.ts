@@ -43,10 +43,10 @@ export function createCrosshairWindow(): void {
 
 function centerWindow(window: BrowserWindow): void {
     const { width: windowWidth, height: windowHeight } = window.getBounds();
-    const primaryDisplay = screen.getPrimaryDisplay()
-    const size: Size = primaryDisplay.workAreaSize
-    const x = Math.round(size.width / 2 - windowWidth / 2)
-    const y = Math.round(size.height / 2 - windowHeight / 2)
+    const primaryDisplay = screen.getPrimaryDisplay();
+    const size: Size = primaryDisplay.workAreaSize;
+    const x = Math.round(size.width / 2 - windowWidth / 2);
+    const y = Math.round(size.height / 2 - windowHeight / 2);
     window.setPosition(x, y);
 }
 
@@ -63,8 +63,8 @@ export function createSettingsWindow(): void {
         minimizable: false,
         maximizable: false,
         frame: false,
-        vibrancy: 'fullscreen-ui',// on MacOS
-        visualEffectState: 'active',
+        vibrancy: "fullscreen-ui", // on MacOS
+        visualEffectState: "active",
         darkTheme: true,
         alwaysOnTop: true,
         webPreferences: {
@@ -75,7 +75,7 @@ export function createSettingsWindow(): void {
     });
 
     if (process.platform === "win32") {
-        settingsWindow.setBackgroundColor('#222222');
+        settingsWindow.setBackgroundColor("#222222");
     }
 
     const { width: windowWidth, height: windowHeight } = settingsWindow.getBounds();
