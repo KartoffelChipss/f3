@@ -18,12 +18,10 @@
         ]
     },
     "win": {
+        "icon": "src/renderer/img/logo.ico",
+        "appId": "org.strassburger.f3",
         "target": {
-            "target": "nsis",
-            "arch": [
-                "x64",
-                "arm64"
-            ]
+            "target": "nsis"
         }
     },
     "nsis": {
