@@ -21,6 +21,7 @@ export function createCrosshairWindow(): void {
         minimizable: false,
         maximizable: false,
         darkTheme: true,
+        skipTaskbar: true,
         webPreferences: {
             offscreen: false,
             nodeIntegration: false,
