@@ -24,13 +24,8 @@ export function startCheckingForUpdates(): void {
             return;
         }
 
-        if (!getStore().get("checkForUpdates")) {
-            logger.info("Update checks are disabled. Skipping update check.");
-            return;
-        }
-
         checkForUpdates();
-    } else if (getStore().get("checkForUpdates")) checkForUpdates();
+    } else checkForUpdates();
 }
 
 export function checkForUpdates(manual: boolean = false): void {

@@ -8,6 +8,7 @@ import isDev from "electron-is-dev";
 import { createCrosshairWindow, createSettingsWindow } from "./windowManager";
 import "./settingsManager";
 import { registerSettingsShortcut } from "./settingsManager";
+import { startCheckingForUpdates } from "./updater";
 
 export * from "./locations";
 
@@ -42,6 +43,8 @@ if (!gotTheLock) {
         registerSettingsShortcut();
 
         createCrosshairWindow();
+
+        startCheckingForUpdates();
     });
 }
 
