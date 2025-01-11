@@ -1,0 +1,155 @@
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+/* Default Crosshair */
+.crosshair-default {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    scale: .5;
+}
+
+.crosshair-default::before,
+.crosshair-default::after {
+    content: '';
+    position: absolute;
+    background-color: var(--crosshair-color);
+}
+
+.crosshair-default::before {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.crosshair-default::after {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Circle Crosshair */
+.crosshair-circle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--crosshair-color);
+    border-radius: 50%;
+    scale: .5;
+}
+
+/* Dot Crosshair */
+.crosshair-dot {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: var(--crosshair-color);
+    border-radius: 50%;
+    scale: .5;
+}
+
+/* Box Crosshair */
+.crosshair-box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    scale: .5;
+    border: 2px solid var(--crosshair-color);
+}
+
+.crosshair-box::before,
+.crosshair-box::after {
+    content: '';
+    position: absolute;
+    background-color: var(--crosshair-color);
+}
+
+.crosshair-box::before {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.crosshair-box::after {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Diagonal Crosshair */
+.crosshair-diagonal {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    scale: .5;
+    rotate: 45deg;
+}
+
+.crosshair-diagonal::before,
+.crosshair-diagonal::after {
+    content: '';
+    position: absolute;
+    background-color: var(--crosshair-color);
+}
+
+.crosshair-diagonal::before {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.crosshair-diagonal::after {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Four Corners Crosshair */
+.crosshair-corners {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    scale: .5;
+}
+
+.crosshair-corners::before,
+.crosshair-corners::after {
+    content: '';
+    position: absolute;
+    background-color: var(--crosshair-color);
+}
+
+.crosshair-corners::before {
+    width: 10px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    border-top: 2px solid var(--crosshair-color);
+    border-left: 2px solid var(--crosshair-color);
+}
+
+.crosshair-corners::after {
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--crosshair-color);
+    border-right: 2px solid var(--crosshair-color);
+}

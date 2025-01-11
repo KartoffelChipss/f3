@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>f3 Einstellungen</title>
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+    <h1>
+        <img src="../img/logo.png" />
+        Einstellungen
+    </h1>
+
+    <div class="setting">
+        <label for="theme">Größe</label>
+        <input type="range" id="scale" name="scale" min="0.5" max="5" step="0.1" value="1" oninput="window.api.invoke('setSetting', {
+            setting: 'scale',
+            value: parseFloat(this.value)
+        })">
+    </div>
+
+    <div class="setting">
+        <label for="theme">Farbe</label>
+        <input type="color" id="color" name="color" value="#ff0000" oninput="window.api.invoke('setSetting', {
+            setting: 'color',
+            value: this.value
+        })">
+    </div>
+
+    <div class="setting">
+        <label for="ch-type">Typ</label>
+        <select id="ch-type" name="type" onchange="window.api.invoke('setSetting', {
+            setting: 'type',
+            value: this.value
+        })">
+            <option value="default">Standard</option>
+            <option value="circle">Kreis</option>
+            <option value="dot">Punkt</option>
+            <option value="box">Box</option>
+            <option value="diagonal">Diagonal</option>
+            <option value="corners">Ecken</option>
+        </select>
+    </div>
+
+    <script src="../js/settings.js"></script>
+</body>
+</html>
