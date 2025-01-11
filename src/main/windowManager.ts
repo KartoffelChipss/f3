@@ -63,7 +63,6 @@ export function createSettingsWindow(): void {
         maximizable: false,
         frame: false,
         vibrancy: 'fullscreen-ui',// on MacOS
-        backgroundMaterial: 'acrylic', // on Windows 11
         visualEffectState: 'active',
         darkTheme: true,
         alwaysOnTop: true,
@@ -73,6 +72,10 @@ export function createSettingsWindow(): void {
             preload: path.join(distDir, "preload.js"),
         },
     });
+
+    if (process.platform === "win32") {
+        settingsWindow.setBackgroundColor('#222222');
+    }
 
     const { width: windowWidth, height: windowHeight } = settingsWindow.getBounds();
     const primaryDisplay = screen.getPrimaryDisplay();
