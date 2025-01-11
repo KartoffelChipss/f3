@@ -26,6 +26,8 @@ h1 {
     align-items: center;
     gap: 7px;
 
+    margin-bottom: -10px;
+
     img {
         --hw: 50px;
         width: var(--hw);
@@ -64,13 +66,13 @@ h1 {
             }
         }
 
-        &:focus{
+        &:focus {
             outline: none;
         }
     }
 
     select {
-        background-color: #171717;
+        background-color: rgba(0, 0, 0, 0.5);;
         color: #fff;
         padding: 7px 10px;
         border: none;
@@ -81,5 +83,30 @@ h1 {
         &:focus {
             outline: none;
         }
+    }
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(1.1);
+    }
+
+    svg {
+        --hw: 20px;
+        width: var(--hw);
+        height: var(--hw);
     }
 }

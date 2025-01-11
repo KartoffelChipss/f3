@@ -59,3 +59,7 @@ ipcMain.handle("getSettings", (event, data) => {
 ipcMain.handle("getVersion", (event, data) => {
     return app.getVersion();
 });
+
+ipcMain.handle("quit", (event, data) => {
+    app.quit();
+});

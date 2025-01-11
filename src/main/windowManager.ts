@@ -22,6 +22,7 @@ export function createCrosshairWindow(): void {
         maximizable: false,
         darkTheme: true,
         webPreferences: {
+            offscreen: false,
             nodeIntegration: false,
             contextIsolation: true,
             preload: path.join(distDir, "preload.js"),
@@ -56,7 +57,7 @@ export function createSettingsWindow(): void {
 
     settingsWindow = new BrowserWindow({
         width: 330,
-        height: 340,
+        height: 395,
         resizable: false,
         minimizable: false,
         maximizable: false,

@@ -3,10 +3,10 @@ import {dialog} from "electron";
 export default async function (): Promise<'update' | 'remindlater' | 'discard'> {
     const result = await dialog.showMessageBox({
         type: 'info',
-        buttons: ['Update', 'Remind Later', 'Discard'],
+        buttons: ['Updaten', 'Später erinnern', 'Verwerfen'],
         defaultId: 0,
-        title: 'Update Available',
-        message: 'A new version of f3 is available. Would you like to update now?',
+        title: 'Update verfügbar',
+        message: 'Eine neue Version von F3 ist verfügbar. Möchtest du sie herunterladen?',
     });
 
     if (result.response == 0) return 'update';

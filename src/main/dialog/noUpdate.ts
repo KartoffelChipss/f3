@@ -5,8 +5,8 @@ export default async function (): Promise<boolean> {
         type: 'info',
         buttons: ['OK'],
         defaultId: 0,
-        title: 'No Update Available',
-        message: 'No update available!\nCurrent version: ' + app.getVersion(),
+        title: 'Keine Updates verfügbar',
+        message: 'Es sind keine Updates verfügbar.\n\nAktuelle Version: ' + app.getVersion(),
     });
 
     return true;

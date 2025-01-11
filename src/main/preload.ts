@@ -21,7 +21,8 @@ contextBridge.exposeInMainWorld(
                 "openLinkInFinder",
                 "setSetting",
                 "getSetting",
-                "getSettings"
+                "getSettings",
+                "quit"
             ];
             if (validChannels.includes(channel)) {
                 return ipcRenderer.invoke(channel, data);
