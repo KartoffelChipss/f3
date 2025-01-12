@@ -3,7 +3,7 @@
     "description": "Simple crosshair app for Lennox",
     "module": "index.ts",
     "main": "dist/main.js",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "scripts": {
         "build": "tsc",
         "start": "npm run build && electron .",
