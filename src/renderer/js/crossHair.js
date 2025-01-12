@@ -34,7 +34,7 @@ function setCrossHairColor(color) {
 }
 
 function setCrossHairType(type) {
-    const allTypes = ["default", "circle", "dot", "box", "diagonal", "corners"];
+    const allTypes = ["default", "circle", "dot", "box", "diagonal", "corners", "diagonal-dot-circle"];
 
     allTypes.forEach((t) => {
         crossHair.classList.remove(`crosshair-${t}`);

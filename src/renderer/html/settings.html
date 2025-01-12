@@ -24,12 +24,13 @@
             <option value="box">Box</option>
             <option value="diagonal">Diagonal</option>
             <option value="corners">Ecken</option>
+            <option value="diagonal-dot-circle">Kreis mit Punkt</option>
         </select>
     </div>
 
     <div class="setting">
         <label for="theme">Größe</label>
-        <input type="range" id="scale" name="scale" min="0.5" max="5" step="0.1" value="1" oninput="window.api.invoke('setSetting', {
+        <input type="range" id="scale" name="scale" min="0.3" max="5" step="0.1" value="1" oninput="window.api.invoke('setSetting', {
             setting: 'scale',
             value: parseFloat(this.value)
         })">
